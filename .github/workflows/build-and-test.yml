@@ -12,3 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install dotnet SDK 
+        uses: actions/setup-dotnet@v3 
+        with: 
+          dotnet-version: '8.0' #SDK Version to use 
+          
+      - name: Try to build my code 
+        run: dotnet build
